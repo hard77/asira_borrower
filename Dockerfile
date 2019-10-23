@@ -25,7 +25,7 @@ RUN ls -alh $GOPATH/src/"${APPNAME}"
 RUN ls -alh $GOPATH/src/"${APPNAME}"/vendor
 RUN pwd
 
-FROM alpine-borrower
+FROM alpine
 
 WORKDIR /go/src/
 COPY --from=build-env /go/src/asira_borrower/asira_lender-res /go/src/asira_lender
